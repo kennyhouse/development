@@ -17,14 +17,26 @@ describe "Static pages" do
 	describe "Help page" do
 		it "should have the conent help" do
 			visit '/static_pages/help'
-			page.should have_content('Help')
+			page.should have_selector('h1', :text => 'Help')
+		end
+
+		it "should have the title 'Help'" do
+			visit '/static_pages/help'
+			page.should have_selector('title', :text => "Ruby on Rails Tutorial Development App | Help")
 		end
 	end
+
+	
 
 	describe "About page" do
 		it "should have the content about" do
 			visit '/static_pages/about'
-			page.should have_content('About')
+			page.should have_selector('h1', :text => 'About')
+		end
+
+		it "should have the title 'About Us'" do
+			visit '/static_pages/about'
+			page.should have_selector('title', :text => "Ruby on Rails Tutorial Development App | About Us")
 		end
 	end
 end
