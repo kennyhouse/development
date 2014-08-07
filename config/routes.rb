@@ -1,6 +1,9 @@
 Development::Application.routes.draw do
+
+  resources :microposts
+  resources :users
   #get "static_pages/home"
-  get "user/new"
+  #get "user/new"
   root to: 'static_pages#home'
 
   match '/help', to: 'static_pages#help'
@@ -10,8 +13,7 @@ Development::Application.routes.draw do
   
   
 
-  resources :microposts
-  resources :users
+  
 
 
   # The priority is based upon order of creation:
