@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '2.0.0'
+gem 'bootstrap-sass', '2.3'
 gem 'bcrypt-ruby', '3.0.1'
 #gem 'pg', '0.12.2'
 
@@ -28,8 +28,10 @@ end
 gem 'jquery-rails', '~>2.0.0'
 
 group :test do
-	gem 'capybara', '1.1.2'
+	gem 'capybara', '2.1.0' #previous v: 1.1.2
 	gem 'factory_girl_rails', '1.4.0'
+	gem 'cucumber-rails', '1.4.0', require: false
+	gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 group :production do
